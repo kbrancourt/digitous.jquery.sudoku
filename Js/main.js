@@ -55,35 +55,45 @@ var allSudoku = [
 
 var sudoku = [
     [3, 9, 1, 2, 8, 5, 7, 4, 6],
-    [5, 4, 6, 9, 3, 7, 2, 1, 8],
-    [2, 7, 8, 6, 1, 4, 9, 5, 3],
-    [7, 2, 4, 8, 6, 3, 1, 9, 5],
-    [8, 1, 5, 4, 7, 9, 6, 3, 2],
-    [6, 3, 9, 5, 2, 1, 4, 8, 7],
-    [1, 5, 2, 7, 9, 8, 3, 6, 4],
-    [9, 8, 7, 3, 4, 6, 5, 2, 1],
-    [4, 6, 3, 1, 5, 2, 8, 7, 9]
-     ]
+     [5, 4, 6, 9, 3, 7, 2, 1, 8],
+     [2, 7, 8, 6, 1, 4, 9, 5, 3],
+     [7, 2, 4, 8, 6, 3, 1, 9, 5],
+     [8, 1, 5, 4, 7, 9, 6, 3, 2],
+     [6, 3, 9, 5, 2, 1, 4, 8, 7],
+     [1, 5, 2, 7, 9, 8, 3, 6, 4],
+     [9, 8, 7, 3, 4, 6, 5, 2, 1],
+     [4, 6, 3, 1, 5, 2, 8, 7, 9]
+  ]
 
 
 
 //fonction generateSudoku
 
-function generatSudoku(number){
-    var randomLine = Math.floor(Math.random() * allsudoku.lenght);
-       console.log(allSudoku[randomLine]);
-    
+function generateSudoku(){
+
+    var randomLine = Math.floor(Math.random() * allSudoku.length);
+        console.log(allSudoku[randomLine]);
+
        var index = 0;
        for (var i = 0; i < 9; i++) {
          for (var j = 0; j < 9; j++) {
              sudoku[i][j] = allSudoku[randomLine][index]; // affichera l'élément ligne i, colonne j de votre sudoku
              index++;
-            
-         }
+             }
+        }
 
-     }
+}
    
-   }
    
-   generatSudoku();
+generateSudoku();
    
+
+//fonction displaySudoku
+
+
+
+// function displaySudoku(){
+//     $(document).ready(function(){
+
+//     })
+// }
