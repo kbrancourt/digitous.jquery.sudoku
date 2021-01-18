@@ -15,12 +15,12 @@ h1{
     font-size: 50px;
     font-family: "Roboto";
 }
-.row, .col-1{
+.row, .col-2{
     border: 1px solid rgb(55, 255, 0);
     background-color: rgba(88, 96, 86, 0.238);
     
 }
-.col-1{
+.col-2{
     width: 36px;
     height: 36px;
 }
@@ -33,4 +33,6 @@ h1{
 button{
     margin: 16px;
     background: rgb(55, 255, 0);
+    padding: 8px;
+    border-radius: 10px;
 }
