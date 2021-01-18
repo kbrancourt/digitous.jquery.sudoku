@@ -6,7 +6,7 @@ $(document).ready(function() {
     for (var i = 0; i < 9; i++) {
         sudokuHtml += `<div id="row${i}" class="row">`;
         for (var j = 0; j < 9; j++) {
-            sudokuHtml += `<div id="col${j}" class="col-1">${sudoku[i][j]}</div>`;
+            sudokuHtml += `<div id="col${j}" class="col-1 case">${sudoku[i][j]}</div>`;
         }
         sudokuHtml += '</div>';
     }
@@ -23,19 +23,19 @@ function displaySudoku() {
   
 
 // //bouton generate
-// $(document).ready(function(){
+$(document).ready(function(){
 //     //qd je clique sur le bouton generate
-//     $("#btn-generate").click()
+     $("#btn-generate").click()
 //       //j'appelle la function generatesudoku 
-//      generateSudoku();
-//   })
+      generateSudoku();
+  })
 
 
 // //bouton display
-// $(document).ready(function(){
+ $(document).ready(function(){
 //     //qd je clique sur le bouton display
-//     $("#btn-display").click()
+     $("#btn-display").click()
 //       //j'appelle la function generatesudoku 
-//      displaySudoku();
-//   })
+      displaySudoku();
+ })
   

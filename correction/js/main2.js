@@ -111,19 +111,13 @@ guessSudoku();
 //function isRowValid
 
 function isRowValid(line, number) {
-  var lineRow = sudoku[i];
-  for(var i = 1; i <= 9; i++)
-      
   
-  //si number est sur line => return false
-
-  if(number === lineRow.charAt(i) ){
-    console.log("false")
-  //si number n'est pas sur line => return true
-  } else if( number !== lineRow.charAt(i) ){
-    console.log("true") 
+  for(var i = 1; i <= 9; i++){
+    if(sudoku[line][i] === number){
+      return false
+    }
   }
-
+    return true
 }
 isRowValid(2,5);
 isRowValid(3,5);
@@ -131,18 +125,28 @@ isRowValid(3,5);
 //function isColumnValid
 
 function isColumnValid(line, number) {
-  var lineColumn= sudoku[i]; 
-  for(var i = 1; i <= 9; i++)
-      
-  
-  //si number est sur column => return false
 
-  if(number === lineColumn.charAt(i) ){
-    console.log("false");
-  //si number n'est pas sur column => return true
-  } else if( number !== lineColumn.charAt(i) ){
-    console.log("true") ; 
+    for(var j = 1; j <= 9; j++){
+    if(sudoku[line][j] === number){
+      return false
+    }
+  }
+    return true
+}
+
+isColumnValid(1, 8);
+isColumnValid(2, 7);
+
+//function isBlockValid
+function isBlockValid(line,column, number) {
+  
+}
+
+
+
+//function isValid
+function isValid(number) {
+  if(number === lineRow && number === lineColumn){
+    return true
   }
 }
-isColumnValid(5, 8)
-isColumnValid(1, 8)
